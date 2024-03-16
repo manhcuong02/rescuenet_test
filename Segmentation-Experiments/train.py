@@ -147,7 +147,7 @@ def main_worker(gpu, ngpus_per_node, argss):
 
     # Import the requested dataset
     if args.dataset.lower() == 'rescuenet':
-        from data import RescueNetv2 as dataset
+        from data import RescueNet as dataset
     else:
         # Should never happen...but just in case it does
         raise RuntimeError("\"{0}\" is not a supported dataset.".format(
