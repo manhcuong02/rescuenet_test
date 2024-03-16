@@ -179,7 +179,9 @@ def main_worker(gpu, ngpus_per_node, argss):
             transform=image_transform,
             label_transform=label_transform)
         val_loader = torch.utils.data.DataLoader(val_data, batch_size=args.batch_size_val, shuffle=False, num_workers=args.workers)
-        
+    
+    train_epochs = []
+    
     for epoch in range(args.start_epoch, args.epochs):
         epoch_log = epoch + 1
         
