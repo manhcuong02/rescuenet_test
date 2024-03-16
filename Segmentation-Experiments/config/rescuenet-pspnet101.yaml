@@ -7,7 +7,7 @@ DATA:
 TRAIN:
   arch: pspnet
   layers: 101
-  use_pretrained_weights: True # to indicate whether the model will use pre-trained weights or not
+  use_pretrained_weights: False # to indicate whether the model will use pre-trained weights or not
   dataset: rescuenet # @sh : new param
   sync_bn: True  # adopt syncbn or not
   train_h: 713 #1024 
