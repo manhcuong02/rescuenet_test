@@ -1,7 +1,7 @@
 DATA:
-  data_root: dataset/RescueNet
-  train_list: dataset/cityscapes/list/fine_train.txt
-  val_list: dataset/cityscapes/list/fine_val.txt
+  data_root: /kaggle/input/rescuenet/RescueNet/
+  train_list: /kaggle/working/train.txt
+  val_list: /kaggle/working/val.txt
   classes: 11
 
 TRAIN:
@@ -48,7 +48,7 @@ Distributed:
   loss_scale:
 
 TEST:
-  test_list: dataset/michael/list/test_img_list.txt
+  test_list: /kaggle/working/test.txt
   split: val  # split in [train, val and test]
   mode: vis  # [test, vis], test=for numeric result, vis=for visual resutls
   predict_color: True
