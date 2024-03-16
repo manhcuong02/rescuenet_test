@@ -211,7 +211,7 @@ def resnet101(pretrained=False, **kwargs):
     model = ResNet(Bottleneck, [3, 4, 23, 3], **kwargs)
     if pretrained:
         # model.load_state_dict(model_zoo.load_url(model_urls['resnet101']))
-        model_path = './initmodel/resnet101_v2.pth'
+        model_path = '/kaggle/input/pretrained-pytorch/resnet101-5d3b4d8f.pth'
         model.load_state_dict(torch.load(model_path), strict=False)
     return model
 
